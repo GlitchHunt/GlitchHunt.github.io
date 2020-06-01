@@ -4,7 +4,7 @@ body {
     background-color: #07020D;
 }
 
-h1, p, .streamers, form {
+h1, p {
     text-align: center;
     color: #E0E2DB;
 }
