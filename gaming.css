@@ -2,27 +2,37 @@ body {
     display: block;
     margin: 8px;
     background-color: #07020D;
+    
 }
 
 h1, p {
     text-align: center;
     color: #E0E2DB;
+    font-family: roboto;
 }
 
 h2, h3, h4 {
     text-align: center;
     color: #E0E2DB;
     font-size: 20px;
+    font-family: roboto;
 }
 
 div {
-    border: 1px solid red;
     display: flex;
     justify-content: space-evenly;
 }
 
-card {
+article {
     text-align: center;
     display: flex;
     flex-direction: column;
+    font-family: roboto;
+}
+
+.profile-image {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    text-align: center;
 }
