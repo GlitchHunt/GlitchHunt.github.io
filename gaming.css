@@ -25,11 +25,18 @@ div {
 }
 
 article {
+    position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     font-family: roboto;
     margin: 25px;
+}
+
+#close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 .profile-image {
