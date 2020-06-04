@@ -11,6 +11,12 @@ h1, p {
     font-family: roboto;
 }
 
+a {
+    text-align: center;
+    color: rgb(191, 240, 252);
+    font-family: roboto;
+}
+
 h2, h3, h4 {
     text-align: center;
     color: #E0E2DB;
