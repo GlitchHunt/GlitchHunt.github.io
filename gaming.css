@@ -55,3 +55,7 @@ article {
 .profile-image:hover {
     border-radius: 3px;
 }
+
+.alert-button {
+    align-content: center;
+}
