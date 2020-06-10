@@ -61,14 +61,14 @@ article {
     align-content: center;
 }
 
-#game-image {
+.game-image {
     height: 50px;
     width: 50px;
     text-align: center;
     margin: 30px;
 }
 
-#games-played {
+.games-played {
     text-align: center;
     justify-content: center;
 }
