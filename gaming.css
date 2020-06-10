@@ -37,6 +37,7 @@ article {
     flex-direction: column;
     font-family: roboto;
     margin: 25px;
+    
 }
 
 #close-btn {
@@ -59,3 +60,16 @@ article {
 .alert-button {
     align-content: center;
 }
+
+#game-image {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin: 30px;
+}
+
+#games-played {
+    text-align: center;
+    justify-content: center;
+}
+
