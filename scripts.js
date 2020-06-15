@@ -12,3 +12,4 @@ var alertButton = document.querySelector("#alert-button")
     alertButton.addEventListener("click", function() {
     alert("What are you doing... They were simple instructions.")
     });
+
