@@ -1,3 +1,4 @@
+
 var articles = document.querySelectorAll("article")
 
 articles.forEach(function(elem) {
@@ -8,8 +9,27 @@ articles.forEach(function(elem) {
 
 
 var alertButton = document.querySelector("#alert-button")
-// console.log(alertButton) - use these to check you've grabbed the right element
     alertButton.addEventListener("click", function() {
     alert("What are you doing... They were simple instructions.")
     });
 
+
+var deleteButton = document.querySelectorAll(".close-btn"); 
+console.log(deleteButton)
+// grabbing all buttons   
+        deleteButton.forEach(button =>
+            button.addEventListener('click', handleDeleteArticle)
+          );
+// assigning all buttons event listener to wait for "click"
+
+function handleDeleteArticle(event) {
+
+    var buttonD = event.currentTarget;
+    console.log(buttonD);
+
+    var deletedArticle = buttonD.closest('.profileCard');
+    console.log(deletedArticle)
+
+    deletedArticle.remove();
+
+}
