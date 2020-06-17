@@ -1,3 +1,6 @@
+const addLink = document.querySelector('.add-link');
+const gametagInput = document.querySelector('.link-name');
+const gametags = document.querySelector('.gametags');
 
 var articles = document.querySelectorAll("article")
 
@@ -26,10 +29,42 @@ function handleDeleteArticle(event) {
 
     var buttonD = event.currentTarget;
     console.log(buttonD);
-
+    // grabbing button
     var deletedArticle = buttonD.closest('.profileCard');
     console.log(deletedArticle)
-
+    // grabbing closest "profileCard" to the button
     deletedArticle.remove();
-
+    // removes article of button clicked
 }
+
+function handleCardButtonClick(event) {
+    event.preventDefault();
+    // const validStreamerInput = streamerInput.value;
+    const validGametagInput = gametagInput.value;
+
+    console.log(validGametagInput)
+
+    if (validGametagInput) {
+        const newGametagArticle = `
+        <article class="profileCard" data-name="gametagInput">
+            <button class="close-btn" type="button">X</button>
+            <h2>${gametagInput}</h2>
+            <p> API NEEDED</p>
+            <img class="profile-image" src="wowzenithor.PNG" alt="Zenithor">
+        </article>  
+        `;
+        gametags.insertAdjacentHTML("beforeend", newGametagArticle);
+    }
+}
+
+//     if (validStreamerInput) {
+//         const newStreamDetails = `
+//         <div class="streamer">
+//         <p class="streamerName">${validStreamerInput}</p>
+//         <a href="https://twitch.tv/${validStreamerInput}" target="_blank">Twitch</a>
+//     </div>
+//         `;
+//         streamers.insertAdjacentHTML("beforeend", newStreamDetails);    
+//     }
+
+// 
