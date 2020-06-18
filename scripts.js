@@ -2,10 +2,12 @@ const addLink = document.querySelector('.add-link');
 const gametagInput = document.querySelector('.link-name');
 const gametags = document.querySelector('.gametags');
 
+console.log(gametagInput)
+
 var articles = document.querySelectorAll("article")
 
 articles.forEach(function(elem) {
-    elem.addEventListener("click", function() {
+    elem.addEventListener('click', function() {
     alert("This is " + elem.dataset.name)
     });
 });
@@ -48,14 +50,15 @@ function handleCardButtonClick(event) {
         const newGametagArticle = `
         <article class="profileCard" data-name="gametagInput">
             <button class="close-btn" type="button">X</button>
-            <h2>${gametagInput}</h2>
+            <h2>${validGametagInput}</h2>
             <p> API NEEDED</p>
-            <img class="profile-image" src="wowzenithor.PNG" alt="Zenithor">
-        </article>  
         `;
         gametags.insertAdjacentHTML("beforeend", newGametagArticle);
     }
 }
+
+addLink.addEventListener('click', handleCardButtonClick);
+
 
 //     if (validStreamerInput) {
 //         const newStreamDetails = `
