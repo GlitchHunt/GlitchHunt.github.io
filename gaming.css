@@ -73,3 +73,10 @@ article {
     justify-content: center;
 }
 
+.close-btn {
+    background:url(close.png) no-repeat;
+    cursor:pointer;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
