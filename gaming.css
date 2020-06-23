@@ -2,7 +2,6 @@ body {
     display: block;
     margin: 8px;
     background-color: #07020D;
-    
 }
 
 h1, p {
@@ -24,13 +23,13 @@ h2, h3, h4 {
     font-family: roboto;
 }
 
-div {
+.gametags, .gamer-form, .tribute {
     display: flex;
     justify-content: space-evenly;
     flex-flow: row wrap;
 }
 
-article {
+.profileCard {
     position: relative;
     text-align: center;
     display: flex;
@@ -40,7 +39,7 @@ article {
     
 }
 
-#close-btn {
+.close-btn {
     position: absolute;
     top: 5px;
     right: 5px;

@@ -50,3 +50,8 @@ if (validGametagInput) {
         justAdded.addEventListener('click', handleDeleteArticle)
 }
 }
+
+
+// Hoisting pulls all functions to top of page, go through usecase with Dan
+// Closures are functions within functions that can allow access to their var AFTER the function has run. Ask Dan to explain in more detail
+
