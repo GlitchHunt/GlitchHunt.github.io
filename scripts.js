@@ -1,57 +1,54 @@
 const addLink = document.querySelector('.add-link');
 const gametagInput = document.querySelector('.link-name');
 const gametags = document.querySelector('.gametags');
-const alertButton = document.querySelector("#alert-button")
-const deleteButton = document.querySelectorAll(".close-btn"); 
-const articles = document.querySelectorAll("article")
+const alertButton = document.querySelector('#alert-button');
+const deleteButton = document.querySelectorAll('.close-btn');
+const articles = document.querySelectorAll('article');
 
 articles.forEach(function(elem) {
-    elem.addEventListener('click', function() {
-    alert("This is " + elem.dataset.name)
-    });
+  elem.addEventListener('click', function() {
+    alert(`This is ${elem.dataset.name}`);
+  });
 });
 
-alertButton.addEventListener("click", function() {
-    alert("What are you doing... They were simple instructions.")
-    });
-  
+alertButton.addEventListener('click', function() {
+  alert('What are you doing... They were simple instructions.');
+});
 
 deleteButton.forEach(button =>
-        button.addEventListener('click', handleDeleteArticle)
-              );
+  button.addEventListener('click', handleDeleteArticle)
+);
 
 function handleDeleteArticle(event) {
-    var buttonD = event.currentTarget;
-    console.log(buttonD);
-    var deletedArticle = buttonD.closest('.profileCard');
-    console.log(deletedArticle)
-    deletedArticle.remove();
+  const buttonD = event.currentTarget;
+  console.log(buttonD);
+  const deletedArticle = buttonD.closest('.profileCard');
+  console.log(deletedArticle);
+  deletedArticle.remove();
 }
 
 addLink.addEventListener('click', handleCardButtonClick);
 
 function handleCardButtonClick(event) {
-    event.preventDefault();
-    const validGametagInput = gametagInput.value;
-if (validGametagInput) {
+  event.preventDefault();
+  const validGametagInput = gametagInput.value;
+  if (validGametagInput) {
     const newGametagArticle = `
         <article class="profileCard" data-name="gametagInput">
             <button class="close-btn" type="button"></button>
             <h2>${validGametagInput}</h2>
             <p> API NEEDED</p>
         `;
-        
-        gametags.insertAdjacentHTML("beforeend", newGametagArticle);
 
-        const updatedDeleteButtons = document.querySelectorAll(".close-btn");
-        const justAdded = updatedDeleteButtons[updatedDeleteButtons.length - 1];
-        console.log({ justAdded })
+    gametags.insertAdjacentHTML('beforeend', newGametagArticle);
 
-        justAdded.addEventListener('click', handleDeleteArticle)
+    const updatedDeleteButtons = document.querySelectorAll('.close-btn');
+    const justAdded = updatedDeleteButtons[updatedDeleteButtons.length - 1];
+    console.log({ justAdded });
+
+    justAdded.addEventListener('click', handleDeleteArticle);
+  }
 }
-}
-
 
 // Hoisting pulls all functions to top of page, go through usecase with Dan
 // Closures are functions within functions that can allow access to their var AFTER the function has run. Ask Dan to explain in more detail
-
