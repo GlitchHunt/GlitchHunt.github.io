@@ -1,81 +1,85 @@
 body {
-    display: block;
-    margin: 8px;
-    background-color: #07020D;
+  display: block;
+  margin: 8px;
+  background-color: #07020d;
 }
 
-h1, p {
-    text-align: center;
-    color: #E0E2DB;
-    font-family: roboto;
+h1,
+p {
+  text-align: center;
+  color: #e0e2db;
+  font-family: roboto;
 }
 
 a {
-    text-align: center;
-    color: rgb(191, 240, 252);
-    font-family: roboto;
+  text-align: center;
+  color: rgb(191, 240, 252);
+  font-family: roboto;
 }
 
-h2, h3, h4 {
-    text-align: center;
-    color: #E0E2DB;
-    font-size: 20px;
-    font-family: roboto;
+h2,
+h3,
+h4 {
+  text-align: center;
+  color: #e0e2db;
+  font-size: 20px;
+  font-family: roboto;
 }
 
-.gametags, .gamer-form, .tribute {
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
+.gametags,
+.gamer-form,
+.tribute {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
 }
 
 .profileCard {
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-family: roboto;
-    margin: 25px;
-    
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: roboto;
+  margin: 25px;
 }
 
 .close-btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 .profile-image {
-    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    text-align: center;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  text-align: center;
 }
 
 .profile-image:hover {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
 .alert-button {
-    align-content: center;
+  align-content: center;
 }
 
 .game-image {
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    margin: 30px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  margin: 30px;
 }
 
 .games-played {
-    text-align: center;
-    justify-content: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .close-btn {
-    background:url(close.png) no-repeat;
-    cursor:pointer;
-    width: 20px;
-    height: 20px;
-    border: none;
+  background: url(close.png) no-repeat;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: none;
 }
