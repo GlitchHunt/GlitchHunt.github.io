@@ -5,12 +5,6 @@ const alertButton = document.querySelector('#alert-button');
 const deleteButton = document.querySelectorAll('.close-btn');
 const articles = document.querySelectorAll('article');
 
-articles.forEach(function(elem) {
-  elem.addEventListener('click', function() {
-    alert(`This is ${elem.dataset.name}`);
-  });
-});
-
 alertButton.addEventListener('click', function() {
   alert('What are you doing... They were simple instructions.');
 });
