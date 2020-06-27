@@ -50,14 +50,11 @@ h4 {
 }
 
 .profile-image {
-  border-radius: 50%;
+  border-radius: 5px;
   height: 150px;
   width: 150px;
   text-align: center;
-}
-
-.profile-image:hover {
-  border-radius: 3px;
+  transition: all 0.2s;
 }
 
 .alert-button {
@@ -82,4 +79,8 @@ h4 {
   width: 20px;
   height: 20px;
   border: none;
+}
+
+.round {
+  border-radius: 50%;
 }

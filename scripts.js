@@ -44,5 +44,14 @@ function handleCardButtonClick(event) {
   }
 }
 
-// Hoisting pulls all functions to top of page, go through usecase with Dan
+const picList = document.querySelectorAll('.profile-image');
+picList.forEach(eachPic => eachPic.addEventListener('click', toggleRound));
+
+function toggleRound(event) {
+  event.currentTarget.classList.toggle('round');
+  // const targetPic = picList.closest('.profile-image');
+  console.log(event.currentTarget);
+}
+// [a, b, c, d, e]
+
 // Closures are functions within functions that can allow access to their var AFTER the function has run. Ask Dan to explain in more detail
