@@ -4,6 +4,9 @@ const gametags = document.querySelector('.gametags');
 const alertButton = document.querySelector('#alert-button');
 const deleteButton = document.querySelectorAll('.close-btn');
 const articles = document.querySelectorAll('article');
+const modalOuter = document.querySelector('.modal-outer');
+const modalInner = document.querySelector('.modal-inner');
+const easter = document.querySelector('#easter');
 
 alertButton.addEventListener('click', function() {
   alert('What are you doing... They were simple instructions.');
@@ -52,6 +55,31 @@ function toggleRound(event) {
   // const targetPic = picList.closest('.profile-image');
   console.log(event.currentTarget);
 }
-// [a, b, c, d, e]
 
-// Closures are functions within functions that can allow access to their var AFTER the function has run. Ask Dan to explain in more detail
+easter.addEventListener(`click`, easterModalClick);
+
+function easterModalClick(event) {
+  modalInner.innerHTML = `
+  <img width="600" height="600" src="https://picsum.photos/600" alt="welcome"/>
+  <p>Congratultions! You found it!</p>
+`;
+  modalOuter.classList.add('open');
+}
+
+function closeModal() {
+  modalOuter.classList.remove('open');
+}
+
+modalOuter.addEventListener('click', function(event) {
+  const isOutside = !event.target.closest('.modal-inner');
+  if (isOutside) {
+    closeModal();
+  }
+});
+
+window.addEventListener('keydown', event => {
+  console.log(event);
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
