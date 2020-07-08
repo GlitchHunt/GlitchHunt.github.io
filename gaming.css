@@ -34,6 +34,13 @@ h4 {
   flex-flow: row wrap;
 }
 
+.twitterborder {
+  margin-top: 3px;
+  margin-right: 5%;
+  position: relative;
+  text-align: center;
+}
+
 .profileCard {
   position: relative;
   text-align: center;
